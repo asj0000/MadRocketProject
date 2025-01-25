@@ -140,8 +140,7 @@ export default function StudentPage() {
           console.log("Student data in unsubscribe method - ", studentData);
           setStudents(studentData); // Update state with real-time data
         });
-        console.log("Students data ", students);
-        // Cleanup subscription on component unmount
+
         return () => unsubscribe();
       } catch (error) {
         console.error("Error getting documents: ", error);
